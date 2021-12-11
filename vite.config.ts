@@ -1,17 +1,18 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import * as autoprefixer from 'autoprefixer';
+import autoprefixer = require('autoprefixer')
 
 export default defineConfig({
   resolve: {
     alias: {
-      "@": "./src",
-    },
+      '@': '/src',
+      '~': '/node_modules'
+    }
   },
   css: {
     postcss: {
-      plugins: [autoprefixer()],
-    },
+      plugins: [autoprefixer()]
+    }
   },
   plugins: [react()]
 })
