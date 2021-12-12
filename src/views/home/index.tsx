@@ -8,8 +8,7 @@ function Home () {
   const { data, setData } = useData()
 
   useEffect(() => {
-    // eslint-disable-next-line no-undef
-    const data:Account.NormalLoginParams = {
+    const data:AccountAPI.NormalLoginParams = {
       email: 'imings@qq.com',
       password: '12345'
     }
