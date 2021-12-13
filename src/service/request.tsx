@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // 请求根路径
-const devBaseURL = 'http://127.0.0.1:3000'
+const devBaseURL = 'http://www.yumingbusan.com:4000/'
 const proBaseURL = 'http://127.0.0.1:3000'
 // @ts-ignore
 const BASE_URL = process.env.NODE_ENV === 'development' ? devBaseURL : proBaseURL
@@ -9,7 +9,7 @@ const BASE_URL = process.env.NODE_ENV === 'development' ? devBaseURL : proBaseUR
 // 全局配置
 axios.defaults.baseURL = BASE_URL
 axios.defaults.timeout = 5000
-axios.defaults.withCredentials = true
+// axios.defaults.withCredentials = true
 
 // 请求拦截器
 axios.interceptors.request.use(function (config) {

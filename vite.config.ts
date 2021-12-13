@@ -45,7 +45,8 @@ export default defineConfig({
       ignored: ['.git/', 'node_modules/', '.husky/']
     },
     // middlewareMode: 'html'
-    origin: 'http://127.0.0.1:4000/'
+    origin: 'http://127.0.0.1:4000/',
+    cors: true
   },
   // 打包配置
   build: {

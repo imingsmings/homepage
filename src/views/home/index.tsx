@@ -1,20 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import useData from '../../store/global'
 import styles from './index.module.scss'
-import { userNormalLogin } from '../../service'
+import { getLoginCaptcha } from '../../service'
 
 function Home () {
   const [count, setCount] = useState<number>(0)
   const { data, setData } = useData()
 
   useEffect(() => {
-    const data:AccountAPI.NormalLoginParams = {
-      email: 'imings@qq.com',
-      password: '12345'
-    }
-    userNormalLogin(data).then((res:any) => {
+    getLoginCaptcha().then((res) => {
       console.log(res)
-    }).catch((error:any) => {
+    }).catch((error) => {
       console.log(error)
     })
   }, [])
