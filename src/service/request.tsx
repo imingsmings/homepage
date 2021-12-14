@@ -1,19 +1,10 @@
 import axios from 'axios'
 
-// 请求根路径
-const devBaseURL = 'http://www.yumingbusan.com:4000/'
-const proBaseURL = 'http://127.0.0.1:3000'
-// @ts-ignore
-const BASE_URL = process.env.NODE_ENV === 'development' ? devBaseURL : proBaseURL
-
-// 全局配置
-axios.defaults.baseURL = BASE_URL
+axios.defaults.baseURL = 'http://www.yumingbusan.com/'
 axios.defaults.timeout = 5000
-// axios.defaults.withCredentials = true
+axios.defaults.withCredentials = true
 
-// 请求拦截器
 axios.interceptors.request.use(function (config) {
-  // 对请求增加时间戳
   if (config.method === 'post') {
     config.data = {
       ...config.data,
@@ -25,19 +16,14 @@ axios.interceptors.request.use(function (config) {
       timestamp: new Date().getTime()
     }
   }
-  config.url = config.url?.replace('/api', '')
   return config
 }, function (error) {
-  // 对请求错误做些什么
   return Promise.reject(error)
 })
 
-// 响应拦截器
 axios.interceptors.response.use(function (response) {
-  // 对响应数据做点什么
   return response
 }, function (error) {
-  // 对响应错误做点什么
   return Promise.reject(error)
 })
 

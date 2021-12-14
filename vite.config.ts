@@ -33,6 +33,9 @@ export default defineConfig({
     stringify: true
   },
   logLevel: 'info',
+  clearScreen: false,
+  envDir: 'env',
+  envPrefix: 'MUSIC_',
   // 插件
   plugins: [react()],
   // 开发服务器
@@ -40,13 +43,15 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 4000,
     strictPort: true,
-    // open: '/home',
+    https: false,
+    open: false,
     watch: {
       ignored: ['.git/', 'node_modules/', '.husky/']
     },
     // middlewareMode: 'html'
     origin: 'http://127.0.0.1:4000/',
     cors: true
+    // force: true
   },
   // 打包配置
   build: {
