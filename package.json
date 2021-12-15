@@ -14,7 +14,6 @@
     "autoprefixer": "^10.4.0",
     "axios": "^0.24.0",
     "hox": "^1.1.5",
-    "normalize.css": "^8.0.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-px-to-viewport": "^1.1.1",
     "postcss-write-svg": "^3.0.1",

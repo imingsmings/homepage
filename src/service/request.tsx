@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://www.yumingbusan.com/'
+axios.defaults.baseURL = 'http://www.yumingbusan.com/api/v3/'
 axios.defaults.timeout = 5000
 axios.defaults.withCredentials = true
 
