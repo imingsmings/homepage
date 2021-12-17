@@ -21,12 +21,12 @@ function Home () {
   }
 
   return (
-    <div>
-      <p className={styles.text}>{count}</p>
-      <button onClick={btnClick}>增加</button>
-      <p>
-        {data}
-      </p>
+    <div id={styles.home}>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
     </div>
   )
 }

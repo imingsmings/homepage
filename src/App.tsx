@@ -5,10 +5,10 @@ import routes from './router'
 
 function App () {
   return (
-    <div className="App">
+    <>
       <Home />
       {renderRoutes(routes)}
-    </div>
+    </>
   )
 }
 

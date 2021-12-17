@@ -13,18 +13,13 @@ export default defineConfig({
   // vite缓存目录
   cacheDir: 'node_modules/.vite',
   resolve: {
-    // 别名
-    alias: {
-      '@': '/src',
-      '~': '/node_modules'
-    },
     // 导入时想要省略的扩展名列表
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
   },
   css: {
     modules: {
       scopeBehaviour: 'local',
-      generateScopedName: 'music_[local]_[hash:base64:4]',
+      generateScopedName: 'music_[local]_[hash:base64:5]',
       hashPrefix: 'music'
     }
   },

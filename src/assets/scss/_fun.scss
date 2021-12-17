@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+/*! px to viewport */
+@function px2vp($px) {
+  @if($px == 1) {
+    @return $px;
+  }
+  @return math.div(math.round(math.div($px * 100vw, 375) * 1000), 1000);
+}
