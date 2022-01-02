@@ -1,12 +1,12 @@
 import React from 'react'
-import Home from './views/home'
 import { renderRoutes } from 'react-router-config'
 import routes from './router'
+import Footer from './components/footer'
 
 function App () {
   return (
     <>
-      <Home />
+      <Footer />
       {renderRoutes(routes)}
     </>
   )

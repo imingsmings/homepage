@@ -1,4 +1,4 @@
-declare namespace AccountAPI {
+declare namespace API {
   // 手机邮箱登录
   interface NormalLoginParams {
     phone?: string,
