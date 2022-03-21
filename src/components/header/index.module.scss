@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: skyblue;
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  line-height: 60px;
+}
+[data-theme='light'] {
+  background: #fff;
+  color: #15141a;
+}
+
+[data-theme='dark'] {
+  background: #15141a;
+}
+

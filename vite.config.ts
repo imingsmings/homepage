@@ -8,6 +8,7 @@ export default defineConfig({
   base: '/',
   // 模式
   mode: 'development',
+  // mode: 'production',
   // 静态资源文件夹
   publicDir: 'public',
   // vite缓存目录
@@ -19,8 +20,8 @@ export default defineConfig({
   css: {
     modules: {
       scopeBehaviour: 'local',
-      generateScopedName: 'music_[local]_[hash:base64:5]',
-      hashPrefix: 'music'
+      generateScopedName: 'homepage_[local]_[hash:base64:5]',
+      hashPrefix: 'homepage'
     }
   },
   json: {
@@ -44,7 +45,7 @@ export default defineConfig({
       ignored: ['.git/', 'node_modules/', '.husky/']
     },
     // middlewareMode: 'html'
-    origin: 'http://127.0.0.1:4000/',
+    origin: 'http://127.0.0.1:4000',
     cors: true
     // force: true
   },

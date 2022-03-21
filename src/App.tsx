@@ -1,12 +1,12 @@
 import React from 'react'
 import { renderRoutes } from 'react-router-config'
 import routes from './router'
-import Footer from './components/footer'
+import News from './news'
 
 function App () {
   return (
     <>
-      <Footer />
+      <News />
       {renderRoutes(routes)}
     </>
   )

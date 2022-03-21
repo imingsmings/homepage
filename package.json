@@ -10,6 +10,7 @@
     "lint-fix": "eslint --fix \"**/*.{js,ts,jsx,tsx}\""
   },
   "dependencies": {
+    "antd": "^4.19.3",
     "antd-mobile": "^5.0.0-rc.4",
     "autoprefixer": "^10.4.0",
     "axios": "^0.24.0",
