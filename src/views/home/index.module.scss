@@ -1,5 +1,8 @@
-.text {
-  background: #5bc0de;
-  transform: none;
-  border-radius: 10px;
+@use '../../assets/scss/fun';
+@use '../../assets/scss/mixin';
+
+#home {
+  ul {
+    @include mixin.flex-around
+  }
 }

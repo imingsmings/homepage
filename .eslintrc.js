@@ -35,6 +35,8 @@ module.exports = {
     'no-new-object': 2,
     'arrow-spacing': 2,
     'no-use-before-define': 'off',
+    'no-unused-vars': 0,
+    'no-undef': 0,
     quotes: [
       2,
       'single',

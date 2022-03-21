@@ -1,7 +1,6 @@
-// eslint-disable-next-line no-unused-vars
-declare namespace Account {
+declare namespace API {
   // 手机邮箱登录
-  export interface NormalLoginParams {
+  interface NormalLoginParams {
     phone?: string,
     email?: string,
     password?: string,
@@ -10,7 +9,7 @@ declare namespace Account {
     captcha?: string,
   }
   // 二维码登录
-  export interface QRLoginParams {
+  interface QRLoginParams {
     key: string,
     qrimg?: string,
   }
