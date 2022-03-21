@@ -1,0 +1,10 @@
+@use '../../assets/scss/fun';
+
+.footer {
+  position: fixed;
+  left: fun.px2vp(0);
+  bottom: fun.px2vp(0);
+  width: 100%;
+  height: fun.px2vp(60);
+  background: #2e6da4;
+}

@@ -13,18 +13,13 @@ export default defineConfig({
   // vite缓存目录
   cacheDir: 'node_modules/.vite',
   resolve: {
-    // 别名
-    alias: {
-      '@': '/src',
-      '~': '/node_modules'
-    },
     // 导入时想要省略的扩展名列表
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
   },
   css: {
     modules: {
       scopeBehaviour: 'local',
-      generateScopedName: 'music_[local]_[hash:base64:4]',
+      generateScopedName: 'music_[local]_[hash:base64:5]',
       hashPrefix: 'music'
     }
   },
@@ -33,6 +28,9 @@ export default defineConfig({
     stringify: true
   },
   logLevel: 'info',
+  clearScreen: false,
+  envDir: 'env',
+  envPrefix: 'MUSIC_',
   // 插件
   plugins: [react()],
   // 开发服务器
@@ -40,12 +38,15 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 4000,
     strictPort: true,
-    // open: '/home',
+    https: false,
+    open: false,
     watch: {
       ignored: ['.git/', 'node_modules/', '.husky/']
     },
     // middlewareMode: 'html'
-    origin: 'http://127.0.0.1:4000/'
+    origin: 'http://127.0.0.1:4000/',
+    cors: true
+    // force: true
   },
   // 打包配置
   build: {
