@@ -6,26 +6,25 @@ import styles from './index.module.scss'
 import { Switch } from 'antd'
 
 function News() {
-	const [mode, setMode] = useState<string>('light')
-
-	const _onModeChange = (mode: boolean) => {
-		setMode(mode ? 'dark' : 'light')
-	}
-	const date = new Date()
-	return (
-		<div className={styles.news} data-theme={mode}>
-			<div className={styles.news_header}>
-				<p>
-					{date.getFullYear()}-{date.getMonth() + 1}-{date.getDate()}
-				</p>
-				<p className={styles.mode}>
-					<span>黑暗模式</span>
-					<Switch onChange={_onModeChange} />
-				</p>
-			</div>
-			<NewsList newsList={dataList} />
-		</div>
-	)
+  const [mode, setMode] = useState<string>('light')
+  const _onModeChange = (mode: boolean) => {
+    setMode(mode ? 'dark' : 'light')
+  }
+  const date = new Date()
+  return (
+    <div className={styles.news} data-theme={mode}>
+      <div className={styles.news_header}>
+        <p>
+          {date.getFullYear()}-{date.getMonth() + 1}-{date.getDate()}
+        </p>
+        <p className={styles.mode}>
+          <span>黑暗模式</span>
+          <Switch onChange={_onModeChange} />
+        </p>
+      </div>
+      <NewsList newsList={dataList} />
+    </div>
+  )
 }
 
 export default News
