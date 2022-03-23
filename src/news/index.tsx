@@ -7,6 +7,7 @@ import { Switch } from 'antd'
 
 function News() {
 	const [mode, setMode] = useState<string>('light')
+
 	const _onModeChange = (mode: boolean) => {
 		setMode(mode ? 'dark' : 'light')
 	}
