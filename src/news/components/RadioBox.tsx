@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Radio, message } from 'antd'
-import NewIcon from '../../assets/news/new.svg'
-import styles from '../../assets/news/style.module.scss'
+import NewIcon from './new.svg'
+import styles from './style.module.scss'
 
 function RadioBox (props:any) {
   const [value, setValue] = useState('')
@@ -38,7 +38,7 @@ function RadioBox (props:any) {
           <div className={styles.selections}>
             {item.options.map((opt:any) => {
               return (
-                <Radio value={opt.tag} key={`${opt.tag}${opt.desc}`}>
+                <Radio value={opt.tag} key={`${opt.tag}${opt.desc}`} className={styles.options}>
                   {opt.tag}.{opt.desc}
                 </Radio>
               )

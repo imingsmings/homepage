@@ -20,8 +20,8 @@ export default defineConfig({
   css: {
     modules: {
       scopeBehaviour: 'local',
-      generateScopedName: 'homepage_[local]_[hash:base64:5]',
-      hashPrefix: 'homepage'
+      generateScopedName: 'imings_[local]_[hash:base64:5]',
+      hashPrefix: 'imings'
     }
   },
   json: {

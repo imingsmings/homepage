@@ -18,8 +18,22 @@
   .selections {
     display: flex;
     flex-direction: column;
-    .ant-radio-wrapper {
+    .options {
       line-height: 28px;
+    }
+  }
+}
+[data-theme='dark'] {
+  .radio_box {
+    .title {
+      color: #fff;
+      transition: all 1.5s;
+    }
+  }
+  .selections {
+    .options {
+      color: #fff;
+      transition: all 1.5s;
     }
   }
 }
