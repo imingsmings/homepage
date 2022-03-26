@@ -7,8 +7,8 @@ export default defineConfig({
   // 开发或生产环境服务的公共基础路径
   base: '/',
   // 模式
-  mode: 'development',
-  // mode: 'production',
+  // mode: 'development',
+  mode: 'production',
   // 静态资源文件夹
   publicDir: 'public',
   // vite缓存目录
@@ -58,8 +58,7 @@ export default defineConfig({
     cssCodeSplit: true,
     cssTarget: 'chrome61',
     sourcemap: true,
-    rollupOptions: {
-    },
+    rollupOptions: {},
     manifest: true,
     minify: 'esbuild',
     chunkSizeWarningLimit: 500
