@@ -3,18 +3,26 @@ import { Radio, message } from 'antd'
 import NewIcon from './new.svg'
 import styles from './style.module.scss'
 
-function RadioBox (props:any) {
+function RadioBox(props: any) {
   const [value, setValue] = useState('')
   const [item] = useState(props.item)
-  const [insertValue, setInsertValue] = useState('')
+  const [insertValue, setInsertValue] = useState<string>('')
 
-  const _onChange = (e:any) => {
+  const _onChange = (e: any) => {
     const selectedValue = e.target.value
     setValue(selectedValue)
     if (selectedValue === item.rightOpt) {
-      message.success('回答正确', 0.5).then()
-      item.options.forEach((opt:any) => {
+      item.options.forEach((opt: any) => {
         if (opt.tag === item.rightOpt) {
+          message
+            .success({
+              content: '回答正确',
+              duration: 0.5,
+              style: {
+                marginTop: '60px'
+              }
+            })
+            .then()
           setInsertValue(opt.tag)
         }
       })
@@ -28,7 +36,9 @@ function RadioBox (props:any) {
       {item && (
         <Radio.Group onChange={_onChange} value={value} key={item.id}>
           <p className={styles.title}>
-            {props.index <= 20 && <img src={NewIcon} className={styles.icon} alt="" />}
+            {props.index <= 50 && (
+              <img src={NewIcon} className={styles.icon} alt="" />
+            )}
             {item.id}. {item.title.match(/^.*\(/)[0].replace('(', '')}
             <span className={insertValue ? styles.active : ''}>
               ( {insertValue} )
@@ -36,9 +46,13 @@ function RadioBox (props:any) {
             {item.title.match(/\).*/)[0].replace(')', '')}
           </p>
           <div className={styles.selections}>
-            {item.options.map((opt:any) => {
+            {item.options.map((opt: any) => {
               return (
-                <Radio value={opt.tag} key={`${opt.tag}${opt.desc}`} className={styles.options}>
+                <Radio
+                  value={opt.tag}
+                  key={`${opt.tag}${opt.desc}`}
+                  className={`${styles.options} `}
+                >
                   {opt.tag}.{opt.desc}
                 </Radio>
               )

@@ -1,6 +1,6 @@
 .news {
   padding-top: 60px;
-  background: #fff;
+  //background: #fff;
   &[data-theme='dark'] {
     background: #15141a;
   }
@@ -10,12 +10,14 @@
     position: fixed;
     top: 0;
     z-index: 1;
-    background: skyblue;
+    background: linear-gradient(-45deg, #ee7752, #b84ca9, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     display: flex;
     justify-content: space-around;
     align-items: center;
     p {
-      font-size: 30px;
+      font-size: 20px;
       line-height: 60px;
       color: #fff;
       &.mode {
@@ -27,5 +29,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
   }
 }

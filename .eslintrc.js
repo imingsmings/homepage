@@ -33,6 +33,7 @@ module.exports = {
     'no-undef': 0,
     'no-tabs': 2,
     'space-before-function-paren': 0,
+    'spaced-comment': 0,
     quotes: [
       2,
       'single',
