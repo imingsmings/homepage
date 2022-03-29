@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { memo, Suspense } from 'react'
 import { renderRoutes } from 'react-router-config'
+import { withRouter } from 'react-router-dom'
 import routes from './router'
-import News from './news'
+import styles from './App.module.scss'
+import Header from './components/header'
 
-function App () {
+const App = () => {
   return (
-    <>
-      <News />
-      {renderRoutes(routes)}
-    </>
+    <div className={styles.app}>
+      <Suspense fallback={<div>Loading...</div>}>
+        {renderRoutes(routes)}
+      </Suspense>
+    </div>
   )
 }
 
-export default App
+export default withRouter(memo(App))

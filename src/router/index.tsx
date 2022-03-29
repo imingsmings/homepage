@@ -1,18 +1,22 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
 
 const Home = React.lazy(() => import('../views/home'))
+const News = React.lazy(() => import('../news'))
 
 const routes = [
   {
     path: '/',
-    render: () => {
-      return <Redirect to={'home'} />
-    }
+    component: Home,
+    exact: true
   },
   {
     path: '/home',
     component: Home,
+    exact: true
+  },
+  {
+    path: '/news',
+    component: News,
     exact: true
   }
 ]

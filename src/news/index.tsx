@@ -3,6 +3,7 @@ import NewsList from './components/NewsList'
 import dataList from './data/data.json'
 import '../../node_modules/antd/dist/antd.css'
 import styles from './index.module.scss'
+import Header from '../components/header'
 
 function News() {
   const list = [
@@ -32,9 +33,10 @@ function News() {
   }, [])
   return (
     <div className={styles.news}>
-      <div className={styles.news_header}>
-        <p onClick={_toggleHeaderText}>{headerText}</p>
-      </div>
+      <Header title={'时政题库'} />
+      {/*<div className={styles.news_header}>*/}
+      {/*  <p onClick={_toggleHeaderText}>{headerText}</p>*/}
+      {/*</div>*/}
       <NewsList newsList={dataList} />
     </div>
   )
