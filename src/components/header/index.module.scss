@@ -1,34 +1,39 @@
+@use '../../assets/scss/fun';
+
 .header {
   width: 100%;
   position: fixed;
   top: 0;
   background: rgba(0,0,0,0.8);
   z-index: 999;
-  line-height: 60px;
+  line-height: fun.px2vp(60);
   .top {
     margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 fun.px2vp(10);
     .menu, .search{
       display: flex;
       align-items: center;
       img {
-        width: 30px;
-        height: 30px;
+        width: fun.px2vp(30);
+        height: fun.px2vp(30);
       }
+    }
+    .logo {
+      font-size: fun.px2vp(14);
     }
   }
   .nav {
     display: none;
     height: 0;
-    padding: 0 10px;
+    padding: 0 fun.px2vp(10);
     flex-direction: column;
     background: rgba(0,0,0,0.8);
-    min-height: 120px;
+    min-height: fun.px2vp(120);
     li {
-      line-height: 40px;
+      line-height: fun.px2vp(40);
     }
     &.show {
       display: flex;

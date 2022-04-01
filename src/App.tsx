@@ -7,7 +7,7 @@ import styles from './App.module.scss'
 
 const App = () => {
   return (
-    <div className={styles.app} style={{ height: window.innerHeight }}>
+    <div className={styles.app}>
       <Suspense
         fallback={
           <div>

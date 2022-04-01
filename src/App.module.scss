@@ -1,6 +1,11 @@
+@use './assets/scss/fun';
+
 .app {
-  overflow: auto;
-  padding-top: 60px;
+  width: 100vw;
+  height: 100vh;
   background-image: linear-gradient(to left bottom, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);
   color: #fff;
+  font-family: SF Pro SC, SF Pro Display, SF Pro Icons, PingFang SC, Helvetica Neue, Helvetica, Arial, sans-serif;
+  overflow: auto;
+  padding-top: fun.px2vp(60);
 }
