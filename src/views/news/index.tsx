@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import NewsList from './components/NewsList'
 import dataList from './data/data.json'
 import styles from './index.module.scss'
-import Header from '../components/header'
+import Header from '../../components/header'
 
 function News() {
   return (

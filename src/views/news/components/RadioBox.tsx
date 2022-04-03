@@ -36,7 +36,7 @@ function RadioBox(props: any) {
       {item && (
         <Radio.Group onChange={_onChange} value={value} key={item.id}>
           <p className={styles.title}>
-            {props.index <= 15 && (
+            {props.index <= 10 && (
               <img src={NewIcon} className={styles.icon} alt="" />
             )}
             {item.id}. {item.title.match(/^.*\(/)[0].replace('(', '')}
