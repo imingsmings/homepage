@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './index.module.scss'
 import Header from '../../components/header'
+import CopyRight from '../../components/copyright'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         <p>Coming soon.</p>
         <p>Jason Wang</p>
       </div>
+      <CopyRight />
     </div>
   )
 }

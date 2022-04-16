@@ -1,0 +1,22 @@
+@use '../../assets/scss/fun';
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  font-size: fun.px2vp(12);
+  .police {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    img {
+      margin-right: fun.px2vp(6);
+    }
+  }
+  .icp {
+    text-align: center;
+    margin: 0;
+    line-height: fun.px2vp(26);
+
+  }
+}
